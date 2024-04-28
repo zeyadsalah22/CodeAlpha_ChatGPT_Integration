@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{% static 'ChatGPT/style.css' %}">
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat_head">
+            <h2 style="margin:20px;">Chat Bot</h2>
+        </div>
+        <div id="chatbox">
+            <!-- Chat messages will be added here -->
+        </div>
+        <form id="userInput">
+            <input autofocus id="textInput" type="text" name="msg" placeholder="Type your message here...">
+            <button type="submit">➤</button>
+        </form>
+    </div>
+    <script>
+        var userImg = "{% static 'ChatGPT/user.png' %}";
+        var botImg = "{% static 'ChatGPT/chatbot.png' %}";
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js"></script>
+    <script src="{% static 'ChatGPT/script.js' %}" ></script>
+</body>
+</html>
